@@ -1,3 +1,4 @@
+import 'package:doctor_app/core/app_colors.dart';
 import 'package:doctor_app/pages/welcome/welcome_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,10 +18,20 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: AppColors.primaryColor,
+        textTheme: Theme.of(context).textTheme.apply(
+              displayColor: AppColors.textColor,
+            ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(
             padding: const EdgeInsets.all(defaultPadding),
           ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          border: textFieldBorder,
+          enabledBorder: textFieldBorder,
+          //borda do input quando esta sendo escrito algo:
+          focusedBorder: textFieldBorder,
         ),
       ),
       home: const WelcomePage(),

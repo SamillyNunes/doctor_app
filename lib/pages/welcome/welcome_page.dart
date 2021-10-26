@@ -1,6 +1,7 @@
 import 'package:doctor_app/core/app_colors.dart';
 import 'package:doctor_app/core/app_constants.dart';
 import 'package:doctor_app/core/app_vectors.dart';
+import 'package:doctor_app/pages/auth/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -33,7 +34,12 @@ class WelcomePage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (ctx) => const SignUpPage(),
+                        ),
+                      ),
                       style: TextButton.styleFrom(
                         backgroundColor: AppColors.lightBlue,
                       ),
