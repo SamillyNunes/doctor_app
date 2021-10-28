@@ -1,16 +1,25 @@
-# doctor_app
+# Doctor app
+A mobile aplication written in Flutter aiming to be a doctor consultant app. Is inspired in The Flutter Wat video, found here (https://www.youtube.com/watch?v=Lq5M1nmqcLU&list=PLxUBb2A_UUy9rvCoLXopsYQJTTnuW0NIq).
 
-A new Flutter project.
+### Splashscreens
 
-## Getting Started
+- Splashscreen / Tela de inicio
+<img src="https://github.com/SamillyNunes/doctor_app/blob/main/assets/images/readme/sign-in.jpg" height="400px">
 
-This project is a starting point for a Flutter application.
+- Sign Up / Cadastrar
+<img src="https://github.com/SamillyNunes/doctor_app/blob/main/assets/images/readme/sign-in.jpg" height="400px">
 
-A few resources to get you started if this is your first Flutter project:
+- Sign In / Login
+<img src="https://github.com/SamillyNunes/doctor_app/blob/main/assets/images/readme/sign-in.jpg" height="400px">
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Requirements
+You must have installed:
+- Flutter
+- Dart
+- Android Studio
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+### 📌 Find me!
+- Linkedin: https://www.linkedin.com/in/samillynunes19/
+- Instagram: https://www.instagram.com/samillynunes.py/
+- Github: https://github.com/SamillyNunes
