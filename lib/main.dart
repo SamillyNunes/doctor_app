@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
             ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(
+            backgroundColor: AppColors.primaryColor,
             padding: const EdgeInsets.all(defaultPadding),
           ),
         ),
