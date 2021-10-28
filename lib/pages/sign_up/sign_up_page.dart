@@ -1,5 +1,6 @@
 import 'package:doctor_app/core/app_constants.dart';
 import 'package:doctor_app/core/app_vectors.dart';
+import 'package:doctor_app/pages/sign_in/sign_in_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -43,7 +44,12 @@ class SignUpPage extends StatelessWidget {
                       children: [
                         const Text("Já tem uma conta?"),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (ctx) => SignInPage(),
+                            ),
+                          ),
                           child: const Text(
                             "Entrar!",
                             style: TextStyle(

@@ -1,7 +1,8 @@
 import 'package:doctor_app/core/app_colors.dart';
 import 'package:doctor_app/core/app_constants.dart';
 import 'package:doctor_app/core/app_vectors.dart';
-import 'package:doctor_app/pages/auth/sign_up_page.dart';
+import 'package:doctor_app/pages/sign_in/sign_in_page.dart';
+import 'package:doctor_app/pages/sign_up/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -55,7 +56,12 @@ class WelcomePage extends StatelessWidget {
                     child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (ctx) => SignInPage(),
+                          ),
+                        ),
                         style: TextButton.styleFrom(
                           elevation: 0,
                           backgroundColor: Colors.transparent,
