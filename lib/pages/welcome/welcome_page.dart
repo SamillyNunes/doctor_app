@@ -37,7 +37,7 @@ class WelcomePage extends StatelessWidget {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (ctx) => const SignUpPage(),
+                          builder: (ctx) => SignUpPage(),
                         ),
                       ),
                       style: TextButton.styleFrom(

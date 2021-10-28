@@ -1,7 +1,5 @@
-import 'package:doctor_app/core/app_colors.dart';
 import 'package:doctor_app/core/app_constants.dart';
 import 'package:doctor_app/core/app_vectors.dart';
-import 'package:doctor_app/pages/auth/widgets/custom_input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -11,7 +9,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'widgets/sign_up_form.dart';
 
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+  SignUpPage({Key? key}) : super(key: key);
+
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -54,12 +54,16 @@ class SignUpPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: defaultPadding * 2),
-                    const SignUpForm(),
+                    SignUpForm(formKey: _formKey),
                     const SizedBox(height: defaultPadding * 2),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState!.save();
+                          }
+                        },
                         child: const Text(
                           "Cadastrar",
                         ),

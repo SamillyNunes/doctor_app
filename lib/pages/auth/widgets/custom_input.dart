@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:doctor_app/core/app_constants.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 import 'text_field_name.dart';
 
@@ -10,6 +11,9 @@ class CustomInput extends StatelessWidget {
   final bool hasTopPadding;
   final bool isObscureText;
   final TextInputType? textInputType;
+  final FieldValidator fieldValidator;
+  final Function(String?) onSaved;
+  final Function(String?)? onChanged;
   const CustomInput({
     Key? key,
     required this.label,
@@ -17,6 +21,9 @@ class CustomInput extends StatelessWidget {
     this.hasTopPadding = true,
     this.isObscureText = false,
     this.textInputType,
+    required this.fieldValidator,
+    required this.onSaved,
+    this.onChanged,
   }) : super(key: key);
 
   @override
@@ -29,9 +36,12 @@ class CustomInput extends StatelessWidget {
         TextFormField(
           obscureText: isObscureText,
           keyboardType: textInputType,
+          validator: fieldValidator,
           decoration: InputDecoration(
             hintText: hintText,
           ),
+          onSaved: onSaved,
+          onChanged: onChanged,
         ),
       ],
     );
